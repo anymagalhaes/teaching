@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarefas - Todo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Minhas Tarefas</h1>
+      <div>
+        <button id="btnLogout" class="logout">Sair</button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <input id="newTaskInput" placeholder="Nova tarefa" />
+      <button id="btnCreateTask">Adicionar</button>
+    </div>
+
+    <div id="taskList" class="task-list"></div>
+    <p id="taskMsg" class="small"></p>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    // quando abrir a página, carregar tarefas
+    document.addEventListener('DOMContentLoaded', () => {
+      if(!isLogged()){
+        window.location.href = 'index.html';
+        return;
+      }
+      loadTasks();
+      document.getElementById('btnCreateTask').addEventListener('click', createTaskFromPage);
+      document.getElementById('btnLogout').addEventListener('click', logout);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Todo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Login</h1>
+      <a class="small" href="index.html">Início</a>
+    </div>
+
+    <div>
+      <div class="form-row">
+        <input id="loginEmailPage" placeholder="Email" />
+      </div>
+      <div class="form-row">
+        <input id="loginPasswordPage" type="password" placeholder="Senha" />
+      </div>
+      <div class="form-row">
+        <button id="btnLoginPage">Entrar</button>
+        <button class="link-btn" onclick="window.location.href='register.html'">Registrar</button>
+      </div>
+      <p id="loginMsg" class="small"></p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.getElementById('btnLoginPage').addEventListener('click', async () => {
+      await loginUserFromPage();
+    });
+  </script>
+</body>
+</html>
