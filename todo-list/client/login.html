@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login - Todo</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Login</h1>
-      <a class="small" href="index.html">Início</a>
+
+<div class="container">
+    <h1>Entrar</h1>
+
+    <div class="form-row">
+        <input type="email" id="loginEmail" placeholder="Email:" />
     </div>
 
-    <div>
-      <div class="form-row">
-        <input id="loginEmailPage" placeholder="Email" />
-      </div>
-      <div class="form-row">
-        <input id="loginPasswordPage" type="password" placeholder="Senha" />
-      </div>
-      <div class="form-row">
-        <button id="btnLoginPage">Entrar</button>
-        <button class="link-btn" onclick="window.location.href='register.html'">Registrar</button>
-      </div>
-      <p id="loginMsg" class="small"></p>
+    <div class="form-row">
+        <input type="password" id="loginPassword" placeholder="Senha:" />
     </div>
-  </div>
 
-  <script src="scripts.js"></script>
-  <script>
-    document.getElementById('btnLoginPage').addEventListener('click', async () => {
-      await loginUserFromPage();
-    });
-  </script>
+    <button onclick="loginUser()">Login</button>
+
+    <p class="small">
+        Não tem conta?
+        <a href="register.html" class="link-btn">Registrar</a>
+    </p>
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

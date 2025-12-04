@@ -1,4 +1,4 @@
-/* styles.css - estilo simples e limpo para as páginas */
+/* styles.css - estilo para as páginas */
 :root{
   --bg:#f6f8fb;
   --card:#ffffff;
@@ -42,6 +42,75 @@ button{
 .task .actions button{margin-left:8px}
 .logout{background:#ef4444}
 .empty{padding:10px;text-align:center;color:var(--muted);}
+
+/* ----- LOGIN & CADASTRO (index.html) ----- */
+
+.index-container {
+  max-width: 420px;
+  margin: 40px auto;
+  background: var(--card);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+.index-container h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #111827;
+}
+
+.newItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.newItem input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  width: 100%;
+}
+
+.addBtn {
+  background: var(--accent);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.addBtn:hover {
+  opacity: 0.9;
+}
+
+.divider-text {
+  text-align: center;
+  color: var(--muted);
+  margin: 14px 0;
+  font-size: 15px;
+}
+
+.divider-text .link-btn {
+  font-size: 15px;
+  padding: 0 4px;
+}
+
+
+/* Responsividade */
+@media (max-width: 520px) {
+  .index-container {
+    width: 92%;
+    padding: 22px;
+  }
+}
+
 
 /* responsivo */
 @media (max-width:520px){
